@@ -1,5 +1,6 @@
 package dal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -17,6 +18,12 @@ public class ControlCamionesImpl implements ControlCamionesServicio{
 		emCamiones.persist(controlCamiones);
 		emCamiones.clear();
 		emCamiones.close();
+	}
+	
+	public void eliminarCombustible(ControlCamiones controlCamiones){
+		List<ControlCamiones> lista= new ArrayList<ControlCamiones>();
+		lista=emCamiones.createQuery("SELECT combustible FROM ControlCamiones combustible").getResultList();
+		int ultimoReg=lista.size();
 	}
 
 	public List<ControlCamiones> buscarCamiones() {
