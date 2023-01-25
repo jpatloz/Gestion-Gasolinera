@@ -87,12 +87,11 @@ public class Controller {
 		consulta.insertarELCombustible(controlCamiones);
 		break;
 		case 6:
-
+			
 		break;
 		case 7:
 		System.out.println("Has escogido la opción de ver todos los llenados de depósito");
 		System.out.println("Lista depósitos: " + consulta.buscarCamiones());
-		
 		break;
 		default:
 	

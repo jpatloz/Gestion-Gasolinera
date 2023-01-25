@@ -59,5 +59,10 @@ public class Consultas{
 		public List<ControlCamiones> buscarCamiones() {
 			return cci.buscarCamiones();
 		}
+		
+		@Transactional
+		public void borrarCombustible(ControlCamiones controlCamiones) {
+			cci.eliminarCombustible(controlCamiones);
+		}
 }
 	
