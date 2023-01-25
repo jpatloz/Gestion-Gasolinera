@@ -8,18 +8,18 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PagosRepostajeImpl {
+public class PagosRepostajeImpl implements PagosRepostajeServicio{
 
 	@PersistenceContext
 	private EntityManager em;
 	
 	public void insertarRepostaje(PagosRepostaje pagosRepostaje) {
 		em.persist(pagosRepostaje);
-		
+		em.clear();
+		em.close();
 	}
 
 	public List<PagosRepostaje> buscarTodos() {
-		// TODO Auto-generated method stub
 		return em.createQuery("SELECT repost FROM PagosRepostaje repost").getResultList();
 	}
 }

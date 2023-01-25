@@ -15,7 +15,7 @@
 	<!-- Se activa el uso de anotaciones en las clases bean -->    
     <context:annotation-config></context:annotation-config>
     <!-- Se define en qué paquete están las clases que podrán tener anotaciones -->
-    <context:component-scan base-package="dal, impl, controller"></context:component-scan>
+    <context:component-scan base-package="dal, dto, impl, controller"></context:component-scan>
 		
 	<!-- Se configura la configuración para la conexión a base de datos -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">

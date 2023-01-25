@@ -7,6 +7,6 @@ public interface PagosRepostajeServicio {
 public void insertarRepostaje(PagosRepostaje pagosRepostaje);
 	
 	
-	public List<PagosRepostaje> buscarTodos();
+public List<PagosRepostaje> buscarTodos();
 
 }
